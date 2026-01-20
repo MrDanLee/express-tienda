@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${category}</title>
+</head>
+<body>
+  <h1>${category}</h1>
+  <p>Numero de productos: ${products.length}</p>
+  <ul>
+    ${products.map(product => `<li>
+      <h2>Nombre: ${product.name}</h2>
+      <p>Precio: ${product.price}</p>
+      <p>Stock: ${product.stock}</p>
+    </li>`).join("")}
+  </ul>
+  <h1>Bienvenido a mi página</h1>
+  <a href="/">Home</a>
+  <a href="/electronica">Electronica</a>
+  <a href="/ropa">Ropa</a>
+  <a href="/hogar">Hogar</a>
+  <a href="/productos">Productos</a>
+  <a href="/productos/baratos">Productos baratos</a>
+  <a href="/productos/caros">Productos caros</a>
+</body>
+</html>
